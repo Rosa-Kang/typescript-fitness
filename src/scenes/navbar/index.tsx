@@ -7,19 +7,21 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import ActionButton from "@/shared/ActionButton";
 
 type Props = {
+    isTopOfPage: boolean;
     selectedPage: SelectedPage;
     setSelectedPage: (value:SelectedPage) => void;
 }
 
-const Navbar = ({selectedPage, setSelectedPage}: Props) => {
+const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
   const flexBetween = "flex items-center justify-between";
   const isAboveMediumScreen = useMediaQuery('(min-width:1060px)');
   const [isMenuToggled, setIsMenuToggled] = useState(false);
+  const navbarBg = isTopOfPage ? "" : "bg-primary-100 drop-shadow"
 
   return (
     <nav>
       <div
-        className={`${flexBetween} fixed top-0 z-30 w-full`}
+        className={`${navbarBg} ${flexBetween} fixed top-0 z-30 w-full`}
       >
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
@@ -65,6 +67,14 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
               <XMarkIcon className="h-6 w-6 text-white transition duration-500 hover:text-primary-300" /> 
             </button>
           </div>
+
+          {/* MENU ITEMS */}
+          <div className="ml-[33%] flex flex-col gap-10 text-2xl">
+                <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                <Link page="Benefits" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                <Link page="Our Classes" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                <Link page="Contact us" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+              </div>
         </div>
       )}
 
