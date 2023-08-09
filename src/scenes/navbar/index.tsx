@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import Logo from '@/assets/Logo.png';
 import { Link } from "./Link";
-import { SelectedPage } from "../shared/types";
+import { SelectedPage } from "../../shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import ActionButton from "@/shared/ActionButton";
 
 type Props = {
     selectedPage: SelectedPage;
@@ -35,24 +36,38 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
 
               <div className={`${flexBetween} gap-8`}>
               <p>Sign In</p>
-              <button>Become a Member</button>
+              <ActionButton setSelectedPage={setSelectedPage}>Become a Member</ActionButton>
               </div>
-            </div>
+              </div>
             ): (
                 <button
-                  className="rounded-full bg-secondary-500 p-2"
+                  className="rounded-full bg-secondary-500 p-2 cursor-pointer"
                   onClick={()=> setIsMenuToggled(!isMenuToggled)}
                 >
-                  {
-                    isMenuToggled? <Bars3BottomRightIcon className="h-6 w-6 text-white" /> :             <XMarkIcon className="h-6 w-6 text-white" />
-                  }
+                      <Bars3BottomRightIcon className="h-6 w-6 text-white transition duration-500 hover:text-primary-300" />
                 </button>
-        )}
+            )}
             
           </div>
-        
         </div>
+
       </div>
+
+      {/**Mobile Menu Modal */}
+      {!isAboveMediumScreen && isMenuToggled && (
+        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl">
+
+          <div className="flex justify-end p-12">
+            <button
+                    className="rounded-full bg-secondary-500 p-2 cursor-pointer"
+                    onClick={()=> setIsMenuToggled(!isMenuToggled)}
+            >
+              <XMarkIcon className="h-6 w-6 text-white transition duration-500 hover:text-primary-300" /> 
+            </button>
+          </div>
+        </div>
+      )}
+
 
     </nav>
   )
