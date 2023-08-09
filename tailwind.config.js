@@ -14,22 +14,24 @@ export default {
         "primary-100":"#ffe1e0",
         "primary-300":"#ffa6a3",
         "primary-500": "#ff6b66",
+        "primary-600": "#704c2c",
         "secondary-400": "#ffcd58",
         "secondary-500": "#ffc132",
       },
       backgroundImage: (theme) => ({
         "gradient-yellowred": "linear-gradient(90deg, #ff616a 0%, #ffc837 100%)",
-        "mobile-home":"url(`./assets/HomePageGraphic.png`)"
+        "mobile-home": "url(`./assets/HomePageGraphic.png`)",
+        "decoration": "url('/src/assets/leaf.png')"
       }),
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"]
       },
       content: {
-        evolvetext: "url(`./assets/EvolveText.png`)",
-        abstractwaves: "url(`./assets/AbstractWaves.png`)",
-        sparkles: "url(`./assets/Sparkles.png`)",
-        circles: "url(`./assets/Circles.png`)",
+        // leaf: "url(`./assets/leaf.png`)",
+        // abstractwaves: "url(`./assets/AbstractWaves.png`)",
+        // sparkles: "url(`./assets/Sparkles.png`)",
+        // circles: "url(`./assets/Circles.png`)",
       }
     },
     screens: {
