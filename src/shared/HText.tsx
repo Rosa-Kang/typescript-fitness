@@ -1,12 +1,13 @@
 
 
 type Props = {
-    children: React.ReactNode
+    children: React.ReactNode;
+    textColor?: string;
 }
 
-export const HText = ({children}: Props) => {
+export const HText = ({children, textColor}: Props) => {
     return (
-        <h2 className="basis-3/5 font-montserrat text-3xl font-bold">
+        <h2 className={`${textColor} basis-3/5 font-montserrat text-3xl font-bold`}>
             {children}
         </h2>
     )
