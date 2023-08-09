@@ -107,7 +107,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                 </motion.div>
 
                 <motion.div
-                    className="mt-16 basis-2/5 md:mt-0"
+                    className="mt-16 basis-2/5 md:mt-0 relative before:bg-gradient-yellowred before:h-full before:w-full before:absolute"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
@@ -117,7 +117,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                         visible: {opacity:1, y:0}
                     }}
                 >
-                    <img className="rounded-lg w-full before:absolute before:backgroundImage-gradient-yellowred" src={image4} alt={`${image4}`} />
+                    <img className="rounded-lg w-full" src={image4} alt={`${image4}`} />
                 </motion.div>
             </div>
         </motion.div>

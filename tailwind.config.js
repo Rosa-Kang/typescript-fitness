@@ -19,7 +19,7 @@ export default {
         "secondary-500": "#ffc132",
       },
       backgroundImage: (theme) => ({
-        "gradient-yellowred": "linear-gradient(90deg, #ff616a 0%, #ffc837 100%)",
+        "gradient-yellowred": "linear-gradient(90deg, rgba(255,97,106,.25),rgba(255,200,55,.25))",
         "mobile-home": "url(`./assets/HomePageGraphic.png`)",
         "decoration": "url('/src/assets/leaf.png')"
       }),
