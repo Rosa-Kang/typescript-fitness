@@ -13,15 +13,15 @@ type Props ={
 const Home = ({setSelectedPage} : Props) => {
     // const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 
-    return <section id="home" className="gap-16 bg-gray-20 py-10 mf:h-full md:pb-0">
-        <motion.div className="mt-10 pt-4 md:flex md:flex-row-reverse items-center w-full bg-primary-600 relative"
+    return <section id="home" className="bg-primary-600 gap-16 pt-10 mf:h-full">
+        <motion.div className="mt-10 pt-4 md:flex md:flex-row-reverse items-center justify-between w-full relative"
         onViewportEnter={()=> setSelectedPage(SelectedPage.Home)}
         >
 
             {/* Main Header */}
             <div className="md:basis-1/2">
                 {/* Heading */}
-                <div className="mt-16 p-14 flex flex-col justify-center">
+                <div className="p-14 flex flex-col justify-center">
 
                     <motion.div
                     className="heading"
@@ -71,10 +71,10 @@ const Home = ({setSelectedPage} : Props) => {
 
             {/* Image */}
             <div className="md:basis-1/2">
-                <img src={HomeGraphic} alt="home-graphic" className="md:rounded-tr-[50vh] md:rounded-bl-[50vh] md:h-[78vh] object-cover"/>
+                <img src={HomeGraphic} alt="home-graphic" className="rounded-tr-[50vh] rounded-bl-[35vh] md:rounded-bl-[50vh] md:h-[78vh] object-cover"/>
             </div>
 
-            {/* Leaf Decoration */}
+            {/* Leaf Decoration */} 
             <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -84,7 +84,7 @@ const Home = ({setSelectedPage} : Props) => {
                 hidden: { opacity: 0, y:100 },
                 visible: {opacity:1, y:0}
                 }}
-                className="absolute bg-decoration bg-cover bg-center -bottom-16 right-0 md:right-20 h-[198px] w-[131px] z-50">
+                className="absolute bg-decoration bg-cover bg-center -bottom-16 right-0 md:right-20 h-[150px] w-[100px] md:h-[198px] md:w-[131px] z-10">
 
             </motion.div>
         </motion.div>
