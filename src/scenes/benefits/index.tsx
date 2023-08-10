@@ -38,7 +38,7 @@ const Benefits = ({setSelectedPage}: Props) => {
     return <section id="benefits" className='py-20 bg-gray-20'>
         <motion.div
         className='mx-auto min-h-full w-5/6'
-        onViewportEnter={()=> setSelectedPage(SelectedPage.Benefits)}
+        onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
         > 
             {/* Header */}
             <motion.div
@@ -74,7 +74,7 @@ const Benefits = ({setSelectedPage}: Props) => {
                 ))}
             </motion.div>
         </motion.div>
-    </section>
+    </className=>
 }
 
 export default Benefits
