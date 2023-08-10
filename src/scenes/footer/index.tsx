@@ -31,7 +31,7 @@ const Footer = ({setSelectedPage}: Props) => {
                 <h4 className="font-bold">Contact Us</h4>
                 <p className="my-5">Tempus metus mattis risus volutpat egestats.</p>
                 <p className="my-5">Et gravida id et etiam</p>
-                <p>(333) 425-6825</p>
+                <a className="hover:text-primary-500 transition" href="tel:+3334256852">(333) 425-6825</a>
             </div>
         </div>
     </footer>

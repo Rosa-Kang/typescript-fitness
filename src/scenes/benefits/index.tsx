@@ -74,7 +74,7 @@ const Benefits = ({setSelectedPage}: Props) => {
                 ))}
             </motion.div>
         </motion.div>
-    </className=>
+    </section>
 }
 
-export default Benefits
+export default Benefits;

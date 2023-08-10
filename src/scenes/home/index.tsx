@@ -13,7 +13,7 @@ type Props ={
 const Home = ({setSelectedPage} : Props) => {
     // const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 
-    return <section id="home" className="bg-primary-600 gap-16 pt-10 mf:h-full">
+    return <section id="home" className="bg-primary-600 gap-16 pt-10 mb-20 mf:h-full">
         <motion.div className="mt-10 pt-4 md:flex md:flex-row-reverse items-center justify-between w-full relative"
         onViewportEnter={()=> setSelectedPage(SelectedPage.Home)}
         >
